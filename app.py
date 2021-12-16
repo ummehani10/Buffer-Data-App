@@ -32,7 +32,7 @@ col3.metric(
 )
 col4.metric(
   "Total Options Sold",
-  f"{data['options']['total_sold'] + data['predictions']['total_sold']} BNB",
+  f"{data['options']['total_sold'] + data['predictions']['total_sold']}",
   # "4%"
 )
 
