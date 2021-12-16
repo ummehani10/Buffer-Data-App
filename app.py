@@ -17,17 +17,17 @@ data = r.json()
 col1, col2, col3, col4 = st.columns(4)
 col1.metric(
   "Net LP Gain",
-  f'{round(data["net_lp_gain"], 2)} BNB',
+  f'{round(data["net_lp_gain"], 3)} BNB',
   # "1.2 °F"
 )
 col2.metric(
   "Net Admin Gain",
-  f'{round(data["net_admin_gain"], 2)} BNB',
+  f'{round(data["net_admin_gain"], 3)} BNB',
   # "-8%"
 )
 col3.metric(
   "Net Referral Gain",
-  f'{round(data["net_referral_gain"], 2)} BNB',
+  f'{round(data["net_referral_gain"], 3)} BNB',
   # "4%"
 )
 col4.metric(
