@@ -14,7 +14,7 @@ st.write(
 r =  requests.get("https://api.buffer.finance/stats/json")
 data = r.json()
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 col1.metric(
   "Net LP Gain",
   f'{round(data["net_lp_gain"], 2)} BNB',
@@ -28,6 +28,11 @@ col2.metric(
 col3.metric(
   "Net Referral Gain",
   f'{round(data["net_referral_gain"], 2)} BNB',
+  # "4%"
+)
+col4.metric(
+  "Total Options Sold",
+  f'{data['options']['total_sold'] + data['predictions']['total_sold']} BNB',
   # "4%"
 )
 
