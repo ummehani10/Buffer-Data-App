@@ -48,7 +48,7 @@ df = pd.DataFrame({
   'Option Size': list(
     data['option_size']['option_size_per_asset'].values()
     | select(lambda x: round(x, 1))
-  ) + [data['option_size']['total_option_size']],
+  ) + [0],
   'Option BNB Size': list(
     data['option_bnb_size']['option_size_per_asset'].values()
     | select(lambda x: round(x, 1))
